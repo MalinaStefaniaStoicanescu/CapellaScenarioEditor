@@ -94,15 +94,7 @@ public class DslProposalProvider extends AbstractDslProposalProvider {
   public void completeSequenceMessage_Source(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     EList<Participant> _variablesDefinedBefore2 = this.variablesDefinedBefore2(((Model) model));
     for (final EObject el : _variablesDefinedBefore2) {
-      String _name = ((Participant) el).getName();
-      String _plus = ("\"" + _name);
-      String _plus_1 = (_plus + "\"");
-      String _name_1 = ((Participant) el).getName();
-      String _plus_2 = ("\"" + _name_1);
-      String _plus_3 = (_plus_2 + "\"");
-      acceptor.accept(
-        this.createCompletionProposal(_plus_1, _plus_3, 
-          null, context));
+      acceptor.accept(this.createCompletionProposal(((Participant) el).getName(), ((Participant) el).getName(), null, context));
     }
   }
   
@@ -110,15 +102,7 @@ public class DslProposalProvider extends AbstractDslProposalProvider {
   public void completeSequenceMessage_Target(final EObject model, final Assignment assignment, final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
     EList<Participant> _variablesDefinedBefore3 = this.variablesDefinedBefore3(((SequenceMessage) model));
     for (final EObject el : _variablesDefinedBefore3) {
-      String _name = ((Participant) el).getName();
-      String _plus = ("\"" + _name);
-      String _plus_1 = (_plus + "\"");
-      String _name_1 = ((Participant) el).getName();
-      String _plus_2 = ("\"" + _name_1);
-      String _plus_3 = (_plus_2 + "\"");
-      acceptor.accept(
-        this.createCompletionProposal(_plus_1, _plus_3, 
-          null, context));
+      acceptor.accept(this.createCompletionProposal(((Participant) el).getName(), ((Participant) el).getName(), null, context));
     }
   }
   

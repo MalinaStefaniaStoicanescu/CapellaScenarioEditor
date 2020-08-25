@@ -89,18 +89,14 @@ class DslProposalProvider extends AbstractDslProposalProvider {
 	override completeSequenceMessage_Source(EObject model, Assignment assignment, ContentAssistContext context,
 		ICompletionProposalAcceptor acceptor) {
 		for (EObject el : variablesDefinedBefore2(model as Model)) {
-			acceptor.accept(
-				createCompletionProposal("\"" + (el as Participant).name + "\"", "\"" + (el as Participant).name + "\"",
-					null, context))
+			acceptor.accept(createCompletionProposal((el as Participant).name, (el as Participant).name, null, context))
 		}
 	}
 
 	override completeSequenceMessage_Target(EObject model, Assignment assignment, ContentAssistContext context,
 		ICompletionProposalAcceptor acceptor) {
 		for (EObject el : variablesDefinedBefore3(model as SequenceMessage)) {
-			acceptor.accept(
-				createCompletionProposal("\"" + (el as Participant).name + "\"", "\"" + (el as Participant).name + "\"",
-					null, context))
+			acceptor.accept(createCompletionProposal((el as Participant).name, (el as Participant).name, null, context))
 		}
 	}
 
